@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import {View, Text} from 'react-native'
 import { StyleSheet } from 'react-native'
 import { ScrollView } from 'react-native'
@@ -6,8 +6,22 @@ import { Image } from 'react-native'
 
 const ImageUrl = "https://firebasestorage.googleapis.com/v0/b/sparta-image.appspot.com/o/lecture%2FaboutImage.png?alt=media&token=13e1c4f6-b802-4975-9773-e305fc7475c4";
 
-export default function AboutPage(){
+export default function AboutPage({navigation}){
     return(
+
+        useEffect(()=>{
+            navigation.setOptions({
+                title:"소개 페이지",
+                headerStyle: {
+                    backgroundColor: "#1F266A",
+                    borderBottomColor: "#1F266A",
+                    shadowColor: "#1F266A",
+                    height:100
+                },
+                headerTintColor: "#fff",
+            })
+        }),
+
         <ScrollView style={styles.container}>
             <View style={styles.Title}><Text style={styles.TitleText}>Hi! 스파르타코딩 앱개발 반에 오신것을 환영합니다</Text></View>
             <View style ={styles.Content}>

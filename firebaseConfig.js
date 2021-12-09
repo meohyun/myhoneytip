@@ -1,5 +1,5 @@
 //import * as firebase from 'firebase/app';
-import firebase from 'firebase/app';
+import firebase from 'firebase/compat/app';
 
 // 사용할 파이어베이스 서비스 주석을 해제합니다
 //import "firebase/auth";
@@ -13,6 +13,7 @@ import "firebase/storage";
 const firebaseConfig = {
     apiKey: "AIzaSyA8D5X6WS1CY_FUuhYdp5_x6XQxewkCdbU",
     authDomain: "mbtiapp-f183b.firebaseapp.com",
+    databaseURL : "https://mbtiapp-f183b-default-rtdb.firebaseio.com/",
     projectId: "mbtiapp-f183b",
     storageBucket: "mbtiapp-f183b.appspot.com",
     messagingSenderId: "148833961339",
